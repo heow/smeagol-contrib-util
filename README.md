@@ -17,13 +17,13 @@ Using Smeagol for your Clojure-based webiste is a no-brainer.  You don't need to
 ## Usage
 
 
-Put this in your namesame:
-```
+Put this in your namespace:
+```clojure
 (:require [smeagol.contrib.util :as wiki])
 ```
 
 ...and read Markdown files directly from the *./content/* directory as HTML:
-```
+```clojure
 (wiki/fetch-html "TestFile")
 
 "<h1>Oh No Not Again</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><p>The end.</p>"
@@ -31,12 +31,20 @@ Put this in your namesame:
 
 Optionally, if you supply your Markdown files with [metadata](https://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide#metadata) they'll be included.  Also you can read the files in 'lisp-style' rather than 'CamelCase':
 
-```
+```clojure
 (wiki/fetch-article "test-file")
 
 {:metadata {:author ["Mr Foo\n"], :type ["storytime"]},
  :html "<h1>Oh No Not Again</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><p>The end.</p>",
  :title "test-file"}
+```
+
+## Installation
+
+All artifacts are published in [clojars](https://clojars.org/smeagol.contrib.util), include this in your Leiningen project file:
+
+```
+[smeagol.contrib.util "0.9.0"]
 ```
 
 ### Notes

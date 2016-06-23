@@ -14,6 +14,14 @@ That said, [Smeagol](https://github.com/simon-brooke/smeagol) is an easy to use 
 Using Smeagol for your Clojure-based webiste is a no-brainer.  You don't need to fire up another host, pay for another database or connect another microservice.   ...in fact you __don't even need to use Smeagol__, just fill the *content* directory with Markdown files and you're good to go.
 
 
+## Installation
+
+All artifacts are published in [clojars](https://clojars.org/smeagol.contrib.util), include this in your Leiningen project file:
+
+```
+[smeagol.contrib.util "0.9.0"]
+```
+
 ## Usage
 
 
@@ -37,14 +45,6 @@ Optionally, if you supply your Markdown files with [metadata](https://github.com
 {:metadata {:author ["Mr Foo\n"], :type ["storytime"]},
  :html "<h1>Oh No Not Again</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><p>The end.</p>",
  :title "test-file"}
-```
-
-## Installation
-
-All artifacts are published in [clojars](https://clojars.org/smeagol.contrib.util), include this in your Leiningen project file:
-
-```
-[smeagol.contrib.util "0.9.0"]
 ```
 
 ### Notes

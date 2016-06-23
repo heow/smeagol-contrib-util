@@ -1,4 +1,4 @@
-(defproject smeagol.contrib.util "0.9.0"
+(defproject smeagol.contrib.util "0.9.1"
   :description "Utilities for the Smeagol Wiki Engine"
   :url "https://github.com/heow/smeagol-contrib-util"
   :license {:name "Eclipse Public License"

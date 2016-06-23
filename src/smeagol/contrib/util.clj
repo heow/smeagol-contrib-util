@@ -16,7 +16,7 @@
     (md/md-to-html-string-with-meta (slurp filename)) 
     (catch Exception e)))
 
-(defn- camel-caseify
+(defn camel-caseify
      "converts hi-there to HiThere"
      [cc]
      (apply str (map string/capitalize (string/split cc #"-"))) )
@@ -26,6 +26,18 @@
 (defn- read-file-camelfallback [article-name fn]
   (if-let [article (fn (make-filename article-name))] article
           (fn (make-filename (camel-caseify article-name)))))
+
+(defn- list-articles []
+  (filter #(.endsWith (.getName %) ".md")
+          (file-seq (clojure.java.io/file "./content"))))
+
+(defn fetch-articles
+  ([]     (map md->html-with-meta (list-articles)))
+  ([pred] (filter pred (fetch-articles))))
+
+;; this is an example of passing in a predicate
+(comment
+  (fetch-articles (fn [x] (not (nil? (:date (:metadata x)))))) )
 
 (defn fetch-html
   "Given a Markdown filename, returns HTML string."

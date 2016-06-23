@@ -19,7 +19,7 @@ Using Smeagol for your Clojure-based webiste is a no-brainer.  You don't need to
 All artifacts are published in [clojars](https://clojars.org/smeagol.contrib.util), include this in your Leiningen project file:
 
 ```
-[smeagol.contrib.util "0.9.1"]
+[smeagol.contrib.util "0.9.2"]
 ```
 
 ## Usage
